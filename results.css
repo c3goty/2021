@@ -574,6 +574,16 @@ a.showReviewsLink:active { cursor: pointer; text-decoration: underline; color: r
 
 }
 
+/* Forza Cars */
+#fohocars {
+    font-size: 0.8em;
+    font-family: 'Merriweather Sans';
+    font-stretch: extra-condensed;
+    text-align: center;
+    overflow-y: hidden;
+}
+#fohocars.reset { overflow-y: clip; }
+
 /* Special Formatting */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13/10), only screen and (min-resolution: 120dpi) {
     #gotys > .goty { width: 100%; }

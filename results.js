@@ -2,7 +2,18 @@ const disableShuffle = true;
 const disableRotate = true;
 const rotateTimeMin = 10000;
 const rotateTimeVariance = 25000;
-const specials = {};
+const specials = {
+    fohocars: {
+        scrollAnim: undefined,
+        shown: function() { 
+            const div = document.getElementById('fohocars');
+            const end = document.getElementById('fohoscrollend');
+            div.classList.remove('reset');
+            scrollAnim = $(end).velocity('scroll', { duration: 35000, easing: 'linear', container: div }, { complete: () => div.classList.add('reset') });
+        },
+        hidden: function() { }
+    }
+};
 
 // Utility functions 
 function shuffleArray(a) {
