@@ -139,9 +139,11 @@ function setupRotate(groupidx, groupelem) {
         // Cancel any active timeouts
         if(timeoutId) { clearTimeout(timeoutId); timeoutId = undefined; }
         // Reshuffle indices if we've used 'em all
-        while(shuffle.length == 0 || shuffle[0] == shownIdx) { shuffle = shuffleArray(Array.from(boxarts.keys())); }
-        // Maybe remove rare boxarts
-        shuffle = shuffle.filter(x => !boxarts[x].classList.contains('rare') || Math.random() > 0.75);
+        while(shuffle.length == 0 || shuffle[0] == shownIdx) { 
+            shuffle = shuffleArray(Array.from(boxarts.keys())); 
+            // Maybe remove rare boxarts
+            shuffle = shuffle.filter(x => !boxarts[x].classList.contains('rare') || Math.random() > 0.75);
+        }
 
         // Determine next item idx
         let nextIdx = $groupelem.data('forcedBoxart');
