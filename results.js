@@ -9,7 +9,7 @@ const specials = {
             const div = document.getElementById('fohocars');
             const end = document.getElementById('fohoscrollend');
             if(this.scrollAnim) { $(end).velocity('stop'); div.scrollTo(0, 0); this.scrollAnim = undefined; }
-            this.scrollAnim = $(end).velocity('scroll', { duration: 36500, easing: 'linear', container: div }, { complete: () => { console.log('finished');  } });
+            this.scrollAnim = $(end).velocity('scroll', { duration: 30000, easing: 'linear', container: div });
         },
         hidden: function() { }
     }
@@ -140,6 +140,8 @@ function setupRotate(groupidx, groupelem) {
         if(timeoutId) { clearTimeout(timeoutId); timeoutId = undefined; }
         // Reshuffle indices if we've used 'em all
         while(shuffle.length == 0 || shuffle[0] == shownIdx) { shuffle = shuffleArray(Array.from(boxarts.keys())); }
+        // Maybe remove rare boxarts
+        shuffle = shuffle.filter(x => !boxarts[x].classList.contains('rare') || Math.random() > 0.75);
 
         // Determine next item idx
         let nextIdx = $groupelem.data('forcedBoxart');
