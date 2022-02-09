@@ -581,6 +581,7 @@ a.showReviewsLink:active { cursor: pointer; text-decoration: underline; color: r
     font-stretch: extra-condensed;
     text-align: center;
     overflow-y: hidden;
+    background-image: url('images/carsbg.jpg');
 }
 #fohocars.reset { overflow-y: clip; }
 
