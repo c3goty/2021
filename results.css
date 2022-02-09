@@ -576,12 +576,13 @@ a.showReviewsLink:active { cursor: pointer; text-decoration: underline; color: r
 
 /* Forza Cars */
 #fohocars {
-    font-size: 0.8em;
+    font-size: 0.6em;
     font-family: 'Merriweather Sans';
     font-stretch: extra-condensed;
     text-align: center;
     overflow-y: hidden;
-    background-image: url('images/carsbg.jpg');
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('images/carsbg.jpg');
+    color: white;
 }
 #fohocars.reset { overflow-y: clip; }
 

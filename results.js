@@ -8,7 +8,8 @@ const specials = {
         shown: function() { 
             const div = document.getElementById('fohocars');
             const end = document.getElementById('fohoscrollend');
-            scrollAnim = $(end).velocity('scroll', { duration: 36500, easing: 'linear', container: div }, { complete: () => { console.log('finished'); div.scrollTo(0, 0); } });
+            if(scrollAnim) { $(end).velocity('stop'); div.scrollTo(0, 0); scrollAnim = undefined; }
+            scrollAnim = $(end).velocity('scroll', { duration: 36500, easing: 'linear', container: div }, { complete: () => { console.log('finished');  } });
         },
         hidden: function() { }
     }
