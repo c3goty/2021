@@ -1,5 +1,5 @@
-const disableShuffle = true;
-const disableRotate = true;
+const disableShuffle = false;
+const disableRotate = false;
 const rotateTimeMin = 10000;
 const rotateTimeVariance = 25000;
 const specials = {
