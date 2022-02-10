@@ -283,8 +283,8 @@ function setupRunnerReviews(game) {
 
     let previousText = 'Hide Reviews';
     showReviewsLink.addEventListener('click', () => {
-        const text = showReviewsLink.textContent;
-        showReviewsLink.textContent = previousText;
+        const text = showReviewsLink.innerHTML;
+        showReviewsLink.innerHTML = previousText;
         previousText = text;
         reviewRow.classList.toggle('reviewsShown');
         game.classList.toggle('reviewsShown');
@@ -304,8 +304,8 @@ function setupGotyReviews(game) {
 
     let previousText = 'Hide Reviews';
     showReviewsLink.addEventListener('click', () => {
-        const text = showReviewsLink.textContent;
-        showReviewsLink.textContent = previousText;
+        const text = showReviewsLink.innerHTML;
+        showReviewsLink.innerHTML = previousText;
         previousText = text;
         const lol = $(reviewRow).slideToggle();
         if(game.dataset.rank == '1') { 

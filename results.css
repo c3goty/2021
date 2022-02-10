@@ -2,11 +2,11 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&family=Merriweather:ital,wght@0,300;0,700;0,900;1,300;1,700;1,900&display=block');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;1,300;1,400&display=block');
-@font-face { font-family: 'Whitney'; font-weight: 300; src: url('../images/font/Whitney300.woff') format("woff"); font-display: block; }
-@font-face { font-family: 'Whitney'; font-weight: 400; src: url('../images/font/Whitney400.woff') format("woff"); font-display: block; }
-@font-face { font-family: 'Whitney'; font-weight: 500; src: url('../images/font/Whitney500.woff') format("woff"); font-display: block; }
-@font-face { font-family: 'Whitney'; font-weight: 600; src: url('../images/font/Whitney600.woff') format("woff"); font-display: block; }
-@font-face { font-family: 'Whitney'; font-style: italic; font-weight: 400; src: url('../images/font/WhitneyItalic.woff') format("woff"); font-display: block; }
+@font-face { font-family: 'Whitney'; font-weight: 300; src: url('images/font/Whitney300.woff') format("woff"); font-display: block; }
+@font-face { font-family: 'Whitney'; font-weight: 400; src: url('images/font/Whitney400.woff') format("woff"); font-display: block; }
+@font-face { font-family: 'Whitney'; font-weight: 500; src: url('images/font/Whitney500.woff') format("woff"); font-display: block; }
+@font-face { font-family: 'Whitney'; font-weight: 600; src: url('images/font/Whitney600.woff') format("woff"); font-display: block; }
+@font-face { font-family: 'Whitney'; font-style: italic; font-weight: 400; src: url('images/font/WhitneyItalic.woff') format("woff"); font-display: block; }
 @font-face {
     font-family: 'Destiny Symbols';
     src: url('images/DestinySymbolsXbox.woff2') format('woff2'),
@@ -37,6 +37,14 @@
 .allcapstitle { font-variant: small-caps; }
 
 .hiddenDiv { display: none !important; }
+
+img.emoji {
+    width: 1.3em;
+    height: 1.2em;
+    object-fit: contain;
+    vertical-align: bottom;
+    display: inline-block;
+}
 
 /* span[aria-label]::after { white-space: pre-wrap; } */
 [aria-label][data-balloon-pos] { cursor: unset; }
@@ -89,7 +97,7 @@
 
 span.spoiler { background-color: black; cursor: pointer; border-radius: .25em; }
 span.spoiler.revealed { background-color: #4a4d53; }
-span.spoiler > span.spoilerText { visibility: hidden; }
+span.spoiler > span.spoilerText { visibility: hidden; user-select: none; }
 span.spoiler.revealed > span.spoilerText { visibility: visible; color: white; }
 
 .recommend { font-size: .7em; font-family: 'Merriweather Sans', Calibri, sans-serif; font-weight: 300; }
@@ -270,8 +278,8 @@ span.spoiler.revealed > span.spoilerText { visibility: visible; color: white; }
     background-size: contain;
     background-repeat: no-repeat;
 }
-.badge[data-goty="true"] { background-image: url('../images/goldribbon.png'); }
-.badge[data-goty="false"] { background-image: url('../images/silverribbon.png'); }
+.badge[data-goty="true"] { background-image: url('images/goldribbon.png'); }
+.badge[data-goty="false"] { background-image: url('images/silverribbon.png'); }
 
 .review > .usernameRow > .username {
     font-family: Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -290,10 +298,6 @@ span.spoiler.revealed > span.spoilerText { visibility: visible; color: white; }
 }
 
 /* Review Preview Formatting */
-span.spoiler { background-color: #4a4d53; cursor: pointer; border-radius: .25em; }
-span.spoiler.spoilerHidden { background-color: black; }
-span.spoiler > span.spoilerText { visibility: visible; color: white; }
-span.spoiler.spoilerHidden > span.spoilerText { visibility: hidden; }
 pre.preformatted {
     float: right;
     margin: 0;
@@ -434,7 +438,7 @@ a.showReviewsLink:active { cursor: pointer; text-decoration: underline; color: r
     position: absolute;
     top: 120px;
     left: -48px;
-    background-image: url('../images/Ribbon.png');
+    background-image: url('images/Ribbon.png');
     background-size: contain;
     background-repeat: no-repeat;
     transform: rotate(-24deg);
@@ -445,7 +449,7 @@ a.showReviewsLink:active { cursor: pointer; text-decoration: underline; color: r
     pointer-events: none;
 }
 .goty.maxgoat > .gotytitle::after {
-    background-image: url('../images/goatribbon.png');
+    background-image: url('images/goatribbon.png');
     width: 150px;
     height: 150px;
     top: 110px;
